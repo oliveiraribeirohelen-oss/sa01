@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>Projetos</title>
+
+  <link rel="stylesheet"
+  href="css/style.css">
+
+  <script defer
+  src="js/script.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <h2>Orçamento de Projetos</h2>
+
+      <nav>
+
+        <a href="index.html"
+        class="active">
+
+          Projetos
+
+        </a>
+
+        <a href="historico.html">
+
+          Histórico
+
+        </a>
+
+        <a href="resumo.html">
+
+          Resumo
+
+        </a>
+
+      </nav>
+
+    </aside>
+
+    <!-- CONTEÚDO -->
+
+    <main class="content">
+
+      <div class="topo">
+
+        <div>
+
+          <h1>Projetos</h1>
+
+        </div>
+
+      </div>
+
+      <!-- ÁREA PRINCIPAL -->
+
+      <div class="area-principal">
+
+        <!-- FORMULÁRIO -->
+
+        <div class="card">
+
+          <h3>Novo Projeto</h3>
+
+          <input
+          type="text"
+          id="nomeProjeto"
+          placeholder="Nome do projeto">
+
+          <div class="linha">
+
+            <input
+            type="number"
+            id="horasProjeto"
+            placeholder="Horas do projeto">
+
+            <input
+            type="number"
+            id="valorHoraProjeto"
+            placeholder="Valor por hora">
+
+          </div>
+
+          <div class="linha">
+
+            <select id="possuiDesconto">
+
+              <option value="nao">
+
+                Sem desconto
+
+              </option>
+
+              <option value="sim">
+
+                Com desconto
+
+              </option>
+
+            </select>
+
+            <input
+            type="number"
+            id="descontoProjeto"
+            placeholder="Desconto (%)">
+
+          </div>
+
+          <div class="linha">
+
+            <select id="urgenciaProjeto">
+
+              <option value="0">
+
+                Sem urgência
+
+              </option>
+
+              <option value="20">
+
+                Com urgência (+20%)
+
+              </option>
+
+            </select>
+
+          </div>
+
+          <button onclick="calcularOrcamento()">
+
+            Calcular Orçamento
+
+          </button>
+
+          <button onclick="criarProjeto()">
+
+            Criar Projeto
+
+          </button>
+
+        </div>
+
+        <!-- RESULTADO -->
+
+        <div class="resultado-card">
+
+          <h2>Valor Final</h2>
+
+          <h1 id="resultadoFinal">
+
+            R$ 0,00
+
+          </h1>
+
+        </div>
+
+      </div>
+
+      <!-- LISTA DE PROJETOS -->
+
+      <section id="listaProjetos"></section>
+
+    </main>
+
+  </div>
+
+</body>
+
+</html>
